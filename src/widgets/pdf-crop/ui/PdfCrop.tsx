@@ -9,14 +9,22 @@ export function PdfCrop() {
     const pdfContext = usePdfCropContext();
 
     return (
-        <>
-            <FileUploadInput/>
-            {(pdfContext && !!pdfContext.inputFile) && (
-                <Suspense fallback={<>Loading</>}>
-                    <PdfCanvasRendererLazy />
-                </Suspense>
-            )}
-            <ImagePreview imagePreview={pdfContext?.imagePreview ?? ""} />
-        </>
+        <main className={"w-screen h-full px-4 py-12"}>
+            <section className={"flex flex-col items-center"}>
+                {(pdfContext && !pdfContext.inputFile) && (
+                    <FileUploadInput/>
+                )}
+            </section>
+            <section>
+                {(pdfContext && !!pdfContext.inputFile) && (
+                    <Suspense fallback={<>Loading</>}>
+                        <PdfCanvasRendererLazy />
+                    </Suspense>
+                )}
+            </section>
+            <section>
+                <ImagePreview imagePreview={pdfContext?.imagePreview ?? ""} />
+            </section>
+        </main>
     )
 }

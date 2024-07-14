@@ -1,5 +1,6 @@
 import {ChangeEvent, memo} from "react";
 import {usePdfCropContext} from "./PdfCropProvider.tsx";
+import {UploadIcon} from "../../../shared/ui";
 
 export const FileUploadInput = memo(function FileUploadInput() {
     const ACCEPT_FILE = ".pdf"
@@ -15,8 +16,25 @@ export const FileUploadInput = memo(function FileUploadInput() {
     }
 
     return (
-        <div>
-            <input type={"file"} accept={ACCEPT_FILE} onChange={onChangeHandler}/>
-        </div>
+        <>
+            <h1 className={"text-4xl mb-2"}>Upload your file</h1>
+            <p className={"text-gray-500 text-lg mb-8"}>File should be PDF</p>
+            <span className={"block w-2/4 rounded-2xl border-dashed border-2 border-zinc-400 bg-slate-100"}>
+                <label className={"block w-full pb-100% relative cursor-pointer"}>
+                    <input
+                        className={"absolute top-0 left-0 opacity-0 pointer-events-none z-0"}
+                        type={"file"}
+                        accept={ACCEPT_FILE}
+                        onChange={onChangeHandler}
+                    />
+                    <span className={"absolute top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 flex flex-col gap-4 items-center"}>
+                        <UploadIcon className={"w-24 h-24 fill-sky-500"}/>
+                        <p className={"text-gray-500 text-center"}>
+                            Choose file to upload
+                        </p>
+                    </span>
+                </label>
+            </span>
+        </>
     )
 });
