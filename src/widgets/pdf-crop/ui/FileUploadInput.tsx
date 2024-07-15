@@ -17,9 +17,9 @@ export const FileUploadInput = memo(function FileUploadInput() {
 
     return (
         <>
-            <h1 className={"text-4xl mb-2"}>Upload your file</h1>
+            <h1 className={"text-4xl mb-2 text-center"}>Upload your file</h1>
             <p className={"text-gray-500 text-lg mb-8"}>File should be PDF</p>
-            <span className={"block w-1/3 rounded-2xl border-dashed border-2 border-zinc-400 bg-slate-100"}>
+            <span className={"block w-full md:w-2/5 xl:w-1/3 rounded-2xl border-dashed border-2 border-zinc-400 bg-slate-100"}>
                 <label className={"block w-full pb-100% relative cursor-pointer"}>
                     <input
                         className={"absolute top-0 left-0 opacity-0 pointer-events-none z-0"}

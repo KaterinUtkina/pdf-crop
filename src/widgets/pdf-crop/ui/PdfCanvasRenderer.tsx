@@ -14,7 +14,7 @@ export default function PdfCanvasRenderer() {
     } = usePdfCanvasRender();
 
     return (
-        <div className={"w-2/4 overflow-auto"}>
+        <div className={"w-full md:w-2/4 overflow-auto"}>
             <div ref={canvasWrapperRef} style={{position: 'relative'}} className={"mx-auto"}>
                 <canvas
                     ref={imageCanvasRef}
