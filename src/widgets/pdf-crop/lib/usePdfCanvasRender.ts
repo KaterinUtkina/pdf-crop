@@ -16,7 +16,7 @@ export function usePdfCanvasRender() {
     const HANDLE_TOP_RIGHT = 'top-right';
     const HANDLE_BOTTOM_LEFT = 'bottom-left';
     const HANDLE_BOTTOM_RIGHT = 'bottom-right';
-    const HANDLE_SIZE = 5;
+    const HANDLE_SIZE = 8;
     const LINE_DASH = [6];
     const FILL_COLOR = 'rgba(0, 0, 0, 0.5)';
     const STROKE_COLOR = 'black';

@@ -7,7 +7,8 @@ export const ImagePreview = memo(function ImagePreview(
         closeShowPreview: () => void
 }){
     const pdfContext = usePdfCropContext();
-    const [isMobileSizeDevice, setIsMobileSizeDevice] = useState<boolean>(false);
+    const [isMobileSizeDevice, setIsMobileSizeDevice]
+        = useState<boolean>(false);
 
     useEffect(() => {
         checkMobileSizeDevice();
@@ -26,9 +27,7 @@ export const ImagePreview = memo(function ImagePreview(
             props.show &&
             <div className={"absolute w-full h-full top-0 left-0 flex items-center justify-center bg-gray-800/90"}
                  onClick={(e) => {
-                     if (e.target === e.currentTarget) {
-                         closeHandler();
-                     }
+                     if (e.target === e.currentTarget) closeHandler();
                  }}>
                 <img
                     src={pdfContext?.imagePreview}

@@ -1,2 +1,3 @@
 export * from './icon';
-export * from './loader.tsx';
+export * from './Loader.tsx';
+export * from './Scroll.tsx';

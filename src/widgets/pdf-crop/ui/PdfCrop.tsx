@@ -14,12 +14,8 @@ export function PdfCrop() {
         setShowPreview(prevState => !prevState);
     }
 
-    const closeShowPreview = () => {
-        setShowPreview(false);
-    }
-
     return (
-        <main className={"w-screen h-full px-4 md:px-12 py-12"}>
+        <main className={"w-screen h-full px-4 py-4 md:px-12 md:py-12"}>
             {(pdfContext && !pdfContext.inputFile) ? (
                 <section className={"flex flex-col items-center"}>
                     <FileUploadInput/>
@@ -47,7 +43,7 @@ export function PdfCrop() {
                                 <PdfCanvasRendererLazy/>
                                 <ImagePreview
                                     show={showPreview}
-                                    closeShowPreview={closeShowPreview}/>
+                                    closeShowPreview={toggleShowPreview}/>
                             </div>
                         </Suspense>
                     )}
