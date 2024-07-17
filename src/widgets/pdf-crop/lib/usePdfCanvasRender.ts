@@ -47,7 +47,7 @@ export function usePdfCanvasRender() {
             canvas.width = viewport.width;
             canvas.height = viewport.height;
 
-            const context = canvas.getContext('2d');
+            const context = canvas.getContext('2d', { willReadFrequently: true });
 
             if (context) {
                 context.clearRect(0, 0, canvas.width, canvas.height);
@@ -67,7 +67,7 @@ export function usePdfCanvasRender() {
             const overlayCanvas = overlayCanvasRef.current;
             if (!overlayCanvas) return;
 
-            const contextOverlayCanvas = overlayCanvas.getContext('2d');
+            const contextOverlayCanvas = overlayCanvas.getContext('2d', { willReadFrequently: true });
 
             if (contextOverlayCanvas) {
                 contextOverlayCanvas.clearRect(0, 0, canvas.width, canvas.height);
@@ -263,7 +263,7 @@ export function usePdfCanvasRender() {
 
     const drawSelectionRect = () => {
         const canvas = overlayCanvasRef.current;
-        const ctx = canvas?.getContext('2d');
+        const ctx = canvas?.getContext('2d', { willReadFrequently: true });
 
         if (!canvas || !ctx || !selectionRect) return;
 
@@ -293,7 +293,7 @@ export function usePdfCanvasRender() {
 
     const resetSelectionRect = () => {
         const canvas = overlayCanvasRef.current;
-        const ctx = canvas?.getContext('2d');
+        const ctx = canvas?.getContext('2d', { willReadFrequently: true });
 
         if (!canvas || !ctx) return;
 
@@ -306,7 +306,7 @@ export function usePdfCanvasRender() {
         const canvas = imageCanvasRef.current;
         if (!canvas) return;
 
-        const context = canvas.getContext('2d');
+        const context = canvas.getContext('2d', { willReadFrequently: true });
         if (!context) return;
 
         const width = Math.abs(selectionRect.width);
@@ -322,7 +322,7 @@ export function usePdfCanvasRender() {
         newCanvas.width = width;
         newCanvas.height = height;
 
-        const newContext = newCanvas.getContext('2d');
+        const newContext = newCanvas.getContext('2d', { willReadFrequently: true });
         if (!newContext) return;
 
         newContext.putImageData(imageData, 0, 0);
