@@ -1,12 +1,7 @@
-import React, {createContext, useCallback, useContext, useMemo, useState} from 'react';
+import React, {createContext, useCallback, useMemo, useState} from 'react';
+import {PdfCropContextType} from "../types";
 
-interface PdfCropContextType {
-    inputFile: File | null;
-    imagePreview: string;
-    changeInputFile: (file: File | null) => void;
-    setImagePreviewHandler: (image: string) => void
-}
-const PdfCropContext = createContext<PdfCropContextType | null>(null);
+export const PdfCropContext = createContext<PdfCropContextType | null>(null);
 
 export const PdfCropProvider = ({ children } : {
     children: React.ReactNode
@@ -35,5 +30,3 @@ export const PdfCropProvider = ({ children } : {
         </PdfCropContext.Provider>
     );
 };
-
-export const usePdfCropContext = () => useContext(PdfCropContext);

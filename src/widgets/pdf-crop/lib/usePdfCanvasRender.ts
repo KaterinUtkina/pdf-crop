@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {getDocument} from "pdfjs-dist";
-import {usePdfCropContext} from "../ui";
 import "pdfjs-dist/build/pdf.worker.mjs";
+import {usePdfCropContext} from "./usePdfCropContext.ts";
 
 export function usePdfCanvasRender() {
     const imageCanvasRef = useRef<HTMLCanvasElement>(null);

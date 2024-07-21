@@ -1,6 +1,6 @@
 import {FileUploadInput} from "./FileUploadInput.tsx";
 import {ImagePreview} from "./ImagePreview.tsx";
-import {usePdfCropContext} from "./PdfCropProvider.tsx";
+import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 import {lazy, Suspense, useState} from "react";
 import {Loader} from "../../../shared/ui";
 

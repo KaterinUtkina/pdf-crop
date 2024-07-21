@@ -1,5 +1,5 @@
 import {memo, useEffect, useState} from "react";
-import {usePdfCropContext} from "./PdfCropProvider.tsx";
+import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 
 export const ImagePreview = memo(function ImagePreview(
     props: {
