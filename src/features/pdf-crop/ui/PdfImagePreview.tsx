@@ -1,7 +1,7 @@
 import {memo, useEffect, useState} from "react";
 import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 
-export const ImagePreview = memo(function ImagePreview(
+export const PdfImagePreview = memo(function ImagePreview(
     props: {
         show: boolean,
         closeShowPreview: () => void

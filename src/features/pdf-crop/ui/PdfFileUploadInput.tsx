@@ -2,7 +2,7 @@ import {ChangeEvent, memo} from "react";
 import {UploadIcon} from "../../../shared/ui";
 import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 
-export const FileUploadInput = memo(function FileUploadInput() {
+export const PdfFileUploadInput = memo(function FileUploadInput() {
     const ACCEPT_FILE = ".pdf"
     const context = usePdfCropContext();
 

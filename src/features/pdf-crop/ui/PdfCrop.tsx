@@ -1,5 +1,5 @@
-import {FileUploadInput} from "./FileUploadInput.tsx";
-import {ImagePreview} from "./ImagePreview.tsx";
+import {PdfFileUploadInput} from "./PdfFileUploadInput.tsx";
+import {PdfImagePreview} from "./PdfImagePreview.tsx";
 import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 import {lazy, Suspense, useState} from "react";
 import {Loader} from "../../../shared/ui";
@@ -18,7 +18,7 @@ export function PdfCrop() {
         <main className={"w-screen h-full px-4 py-4 md:px-12 md:py-12"}>
             {(pdfContext && !pdfContext.inputFile) ? (
                 <section className={"flex flex-col items-center"}>
-                    <FileUploadInput/>
+                    <PdfFileUploadInput/>
                 </section>
             ) : (
                 <section className={"h-full flex flex-col"}>
@@ -41,7 +41,7 @@ export function PdfCrop() {
                             <div
                                 className={"flex justify-between rounded-2xl border-solid border-2 border-zinc-400 bg-slate-100 overflow-hidden"}>
                                 <PdfCanvasRendererLazy/>
-                                <ImagePreview
+                                <PdfImagePreview
                                     show={showPreview}
                                     closeShowPreview={toggleShowPreview}/>
                             </div>
