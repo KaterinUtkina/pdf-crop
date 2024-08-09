@@ -2,7 +2,7 @@ import {PdfFileUploadInput} from "./PdfFileUploadInput.tsx";
 import {PdfImagePreview} from "./PdfImagePreview.tsx";
 import {usePdfCropContext} from "../lib/usePdfCropContext.ts";
 import {lazy, Suspense, useState} from "react";
-import {Loader} from "../../../shared/ui";
+import {Loader} from "../../../shared/ui/Loader.tsx";
 
 const PdfCanvasRendererLazy = lazy(() => import('./PdfCanvasRenderer.tsx'));
 

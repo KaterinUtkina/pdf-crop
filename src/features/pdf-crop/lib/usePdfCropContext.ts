@@ -1,5 +1,5 @@
 import {useContext} from "react";
-import {PdfCropContext} from "../providers";
 import {PdfCropContextType} from "../types";
+import {PdfCropContext} from "../providers/PdfCropProvider.tsx";
 
 export const usePdfCropContext = (): PdfCropContextType | null => useContext(PdfCropContext);

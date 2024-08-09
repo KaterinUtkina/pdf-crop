@@ -1,5 +1,5 @@
 import {usePdfCanvasRender} from "../lib/usePdfCanvasRender.ts";
-import {Scroll} from "../../../shared/ui";
+import {Scroll} from "../../../shared/ui/Scroll.tsx";
 
 export default function PdfCanvasRenderer() {
     const {

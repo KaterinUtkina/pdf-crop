@@ -1,5 +1,6 @@
-import {PdfCropProvider, PdfCrop} from "../features/pdf-crop";
 import "overlayscrollbars/styles/overlayscrollbars.css";
+import {PdfCropProvider} from "../features/pdf-crop/providers/PdfCropProvider.tsx";
+import {PdfCrop} from "../features/pdf-crop/ui/PdfCrop.tsx";
 
 function App() {
     return (
